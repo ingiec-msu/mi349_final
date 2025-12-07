@@ -84,11 +84,43 @@ a:hover { color: #e8bac1; }
     margin: 250px 0;
 }
 
-.photo img {
-    width: 100%;
-    display: block;
+/* ============================
+   SMART PHOTO GRID LAYOUT
+   ============================ */
+
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
+.photo img {
+    width: 100%;
+    flex: 1 1 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* --- 2 images → side-by-side --- */
+.photo img:nth-last-child(2):first-child,
+.photo img:nth-last-child(2):first-child ~ img {
+    flex: 1 1 calc(50% - 10px);
+}
+
+/* --- 3 images → 3-column row --- */
+.photo img:nth-last-child(3):first-child,
+.photo img:nth-last-child(3):first-child ~ img {
+    flex: 1 1 calc(33.333% - 10px);
+}
+
+/* --- 4 images → 2×2 collage --- */
+.photo img:nth-last-child(4):first-child,
+.photo img:nth-last-child(4):first-child ~ img {
+    flex: 1 1 calc(50% - 10px);
+    height: 250px;
+}
+
+/* Caption */
 .caption {
     list-style: none;
     padding: 0;
