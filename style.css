@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 13px;
@@ -8,11 +9,11 @@ body {
 }
 
 a {
-    color: #e8bac1;
+    color: #8b8b8b;
     text-decoration: none;
     transition: 0.3s;
 }
-a:hover { color: #8b8b8b; }
+a:hover { color: #e8bac1; }
 
 /* Layout */
 #container {
@@ -30,6 +31,7 @@ a:hover { color: #8b8b8b; }
     margin-left: calc(540px + 150px);
 }
 
+/* Sidebar */
 .title {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -57,19 +59,21 @@ a:hover { color: #8b8b8b; }
     color: #e8bac1;
 }
 
-/* Dots */
+/* Decorative Dots */
 .dot {
-    width: 6px; height: 6px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     display: inline-block;
     margin: 10px 5px 20px 0;
 }
-.d-one {background: rgba(232,186,193,1);}
-.d-two {background: rgba(232,186,193,0.8);}
-.d-three {background: rgba(232,186,193,0.6);}
-.d-four {background: rgba(232,186,193,0.4);}
-.d-five {background: rgba(232,186,193,0.3);}
+.d-one { background: rgba(232,186,193,1); }
+.d-two { background: rgba(232,186,193,0.8); }
+.d-three { background: rgba(232,186,193,0.6); }
+.d-four { background: rgba(232,186,193,0.4); }
+.d-five { background: rgba(232,186,193,0.3); }
 
+/* Search (unused but kept) */
 .find input {
     border: none;
     width: 100%;
@@ -84,43 +88,32 @@ a:hover { color: #8b8b8b; }
     margin: 250px 0;
 }
 
-/* ============================
-   SMART PHOTO GRID LAYOUT
-   ============================ */
-
+/* ----- IMAGE LAYOUT FIX ----- */
+/* Flexbox layout for image groups */
 .photo {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+/* Default image styling */
 .photo img {
     width: 100%;
-    flex: 1 1 100%;
-    border-radius: 6px;
+    display: block;
+    border-radius: 4px;
     object-fit: cover;
 }
 
-/* --- 2 images → side-by-side --- */
-.photo img:nth-last-child(2):first-child,
-.photo img:nth-last-child(2):first-child ~ img {
-    flex: 1 1 calc(50% - 10px);
+/* EXACT layout rules */
+.photo img:nth-child(2):last-child {
+    width: calc(50% - 5px);
+}
+.photo img:nth-child(1):nth-last-child(2),
+.photo img:nth-child(2):nth-last-child(1) {
+    width: calc(50% - 5px);
 }
 
-/* --- 3 images → 3-column row --- */
-.photo img:nth-last-child(3):first-child,
-.photo img:nth-last-child(3):first-child ~ img {
-    flex: 1 1 calc(33.333% - 10px);
-}
-
-/* --- 4 images → 2×2 collage --- */
-.photo img:nth-last-child(4):first-child,
-.photo img:nth-last-child(4):first-child ~ img {
-    flex: 1 1 calc(50% - 10px);
-    height: 250px;
-}
-
-/* Caption */
+/* Captions */
 .caption {
     list-style: none;
     padding: 0;
@@ -129,7 +122,7 @@ a:hover { color: #8b8b8b; }
 
 .subtitle {
     font-weight: bold;
-    color: #e8bac1;
+    color: #212121;
 }
 
 blockquote {
