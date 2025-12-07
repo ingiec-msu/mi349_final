@@ -1,0 +1,128 @@
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 13px;
+    color: #575757;
+    background-color: #ffffff;
+    margin: 0;
+    line-height: 160%;
+}
+
+a {
+    color: #8b8b8b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover { color: #e8bac1; }
+
+/* Layout */
+#container {
+    position: relative;
+    margin: auto;
+    width: calc(540px + 400px);
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+}
+
+.right .sidebar {
+    margin-left: calc(540px + 150px);
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.25em;
+    margin: 10px 0;
+    color: #212121;
+}
+
+#side-img {
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.side-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -80px;
+    border: 5px solid #fff;
+}
+
+#blogurl::before {
+    content: '@';
+    color: #e8bac1;
+}
+
+/* Dots */
+.dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 5px 20px 0;
+}
+.d-one {background: rgba(232,186,193,1);}
+.d-two {background: rgba(232,186,193,0.8);}
+.d-three {background: rgba(232,186,193,0.6);}
+.d-four {background: rgba(232,186,193,0.4);}
+.d-five {background: rgba(232,186,193,0.3);}
+
+.find input {
+    border: none;
+    width: 100%;
+    padding: 6px 0;
+    background: transparent;
+    color: #8b8b8b;
+}
+
+/* Posts */
+.posts {
+    width: 540px;
+    margin: 250px 0;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+}
+
+.caption {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.subtitle {
+    font-weight: bold;
+    color: #212121;
+}
+
+blockquote {
+    border-left: 1px solid #e0e0e0;
+    padding-left: 15px;
+    margin-left: 15px;
+    color: #212121;
+}
+
+/* Info section */
+.info::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 25px 0 20px 0;
+}
+
+.upper {
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+
+.notecount {
+    margin-left: 15px;
+}
