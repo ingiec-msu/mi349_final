@@ -8,11 +8,11 @@ body {
 }
 
 a {
-    color: #8b8b8b;
+    color: #e8bac1;
     text-decoration: none;
     transition: 0.3s;
 }
-a:hover { color: #e8bac1; }
+a:hover { color: #8b8b8b; }
 
 /* Layout */
 #container {
@@ -129,7 +129,7 @@ a:hover { color: #e8bac1; }
 
 .subtitle {
     font-weight: bold;
-    color: #212121;
+    color: #e8bac1;
 }
 
 blockquote {
