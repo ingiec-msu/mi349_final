@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 13px;
@@ -6,6 +5,10 @@ body {
     background-color: #ffffff;
     margin: 0;
     line-height: 160%;
+
+    /* ✨ Full-page pink border */
+    border: 12px solid #e8bac1;
+    box-sizing: border-box;
 }
 
 a {
@@ -31,7 +34,6 @@ a:hover { color: #e8bac1; }
     margin-left: calc(540px + 150px);
 }
 
-/* Sidebar */
 .title {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -59,21 +61,19 @@ a:hover { color: #e8bac1; }
     color: #e8bac1;
 }
 
-/* Decorative Dots */
+/* Dots */
 .dot {
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     display: inline-block;
     margin: 10px 5px 20px 0;
 }
-.d-one { background: rgba(232,186,193,1); }
-.d-two { background: rgba(232,186,193,0.8); }
-.d-three { background: rgba(232,186,193,0.6); }
-.d-four { background: rgba(232,186,193,0.4); }
-.d-five { background: rgba(232,186,193,0.3); }
+.d-one {background: rgba(232,186,193,1);}
+.d-two {background: rgba(232,186,193,0.8);}
+.d-three {background: rgba(232,186,193,0.6);}
+.d-four {background: rgba(232,186,193,0.4);}
+.d-five {background: rgba(232,186,193,0.3);}
 
-/* Search (unused but kept) */
 .find input {
     border: none;
     width: 100%;
@@ -88,15 +88,13 @@ a:hover { color: #e8bac1; }
     margin: 250px 0;
 }
 
-/* ----- IMAGE LAYOUT FIX ----- */
-/* Flexbox layout for image groups */
+/* ✨ Side-by-side layout for posts with 2 images */
 .photo {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-/* Default image styling */
 .photo img {
     width: 100%;
     display: block;
@@ -104,16 +102,12 @@ a:hover { color: #e8bac1; }
     object-fit: cover;
 }
 
-/* EXACT layout rules */
-.photo img:nth-child(2):last-child {
-    width: calc(50% - 5px);
-}
+/* If exactly 2 images → put side by side */
 .photo img:nth-child(1):nth-last-child(2),
 .photo img:nth-child(2):nth-last-child(1) {
     width: calc(50% - 5px);
 }
 
-/* Captions */
 .caption {
     list-style: none;
     padding: 0;
