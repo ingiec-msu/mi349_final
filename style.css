@@ -65,10 +65,8 @@ a:hover {
 .side-icon {
     width: 64px;
     height: 64px;
-    /* border-radius: 50%; */
     position: absolute;
     margin-top: -80px;
-    /* border: 5px solid #fff; */
 }
 
 #blogurl::before {
@@ -109,7 +107,6 @@ a:hover {
     transform: translateX(5px); /* subtle hover shift */
 }
 
-
 /* Posts */
 .posts {
     width: 540px;
@@ -120,23 +117,21 @@ a:hover {
 .photo {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 10px; /* space between images */
+    margin-bottom: 20px;
 }
 
 .photo img {
-    width: 100%;
-    display: block;
     border-radius: 4px;
     object-fit: cover;
+    flex: 1 1 calc(50% - 5px); /* two images side by side */
+    max-width: calc(50% - 5px);
 }
 
-/* Two-image side-by-side layout */
-.photo img:nth-child(2):last-child {
-    width: calc(50% - 5px);
-}
-.photo img:nth-child(1):nth-last-child(2),
-.photo img:nth-child(2):nth-last-child(1) {
-    width: calc(50% - 5px);
+/* Single image full width */
+.photo img:only-child {
+    flex: 1 1 100%;
+    max-width: 100%;
 }
 
 /* Captions */
