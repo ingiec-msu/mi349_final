@@ -24,12 +24,12 @@ body::before {
 
 /* Links */
 a {
-    color: #8b8b8b;
+    color: #e8bac1;
     text-decoration: none;
     transition: 0.3s;
 }
 a:hover { 
-    color: #e8bac1; 
+    color: #8b8b8b; 
 }
 
 /* Layout */
@@ -100,12 +100,12 @@ a:hover {
 
 .bullet a {
     font-weight: bold;
-    color: #575757;
+    color: #e8bac1;
     transition: color 0.3s, transform 0.3s;
 }
 
 .bullet a:hover {
-    color: #e8bac1;
+    color: #575757;
     transform: translateX(5px); /* subtle hover shift */
 }
 
