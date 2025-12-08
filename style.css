@@ -65,10 +65,10 @@ a:hover {
 .side-icon {
     width: 64px;
     height: 64px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     position: absolute;
     margin-top: -80px;
-    border: 5px solid #fff;
+    /* border: 5px solid #fff; */
 }
 
 #blogurl::before {
