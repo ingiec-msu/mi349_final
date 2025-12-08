@@ -24,7 +24,7 @@ body::before {
 
 /* Links */
 a {
-    color: #e8bac1;
+    color: #dba6ac;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -100,7 +100,7 @@ a:hover {
 
 .bullet a {
     font-weight: bold;
-    color: #e8bac1;
+    color: #dba6ac;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -191,7 +191,7 @@ blockquote {
 
 .contact-container h1 {
     text-align: center;
-    color: #e8bac1;
+    color: #d799a6;
     font-size: 2em;
     margin-bottom: 10px;
     letter-spacing: 2px;
@@ -235,7 +235,7 @@ blockquote {
 }
 
 .contact-form button {
-    background-color: #e8bac1;
+    background-color: #d799a6;
     color: #fff;
     font-weight: bold;
     padding: 12px 20px;
@@ -248,7 +248,7 @@ blockquote {
 }
 
 .contact-form button:hover {
-    background-color: #d799a6;
+    background-color: #c58492;
 }
 
 /* Optional subtle decorative touch */
