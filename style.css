@@ -167,18 +167,41 @@ blockquote {
     margin-left: 15px;
 }
 
-/* ----- CONTACT FORM STYLES ----- */
+/* ----- CONTACT PAGE STYLES ----- */
+.contact-container {
+    width: 540px;
+    margin: 250px auto 100px auto;
+    padding: 30px;
+    background-color: #fff0f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #e8bac1;
+    font-size: 2em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.contact-container p {
+    text-align: center;
+    font-size: 0.95em;
+    color: #575757;
+    margin-bottom: 30px;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 20px;
 }
 
 .contact-form label {
     font-weight: bold;
     color: #212121;
-    margin-bottom: 5px;
 }
 
 .contact-form input,
@@ -187,30 +210,43 @@ blockquote {
     font-size: 13px;
     padding: 10px;
     border: 1px solid #e0e0e0;
-    border-radius: 4px;
+    border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
-    transition: border 0.3s;
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: #e8bac1;
+    box-shadow: 0 0 5px rgba(232,186,193,0.5);
 }
 
 .contact-form button {
     background-color: #e8bac1;
-    color: #ffffff;
+    color: #fff;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
     width: fit-content;
+    align-self: center;
 }
 
 .contact-form button:hover {
     background-color: #d799a6;
+}
+
+/* Optional subtle decorative touch */
+.contact-container::before {
+    content: "✿";
+    font-size: 3em;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - 1.5em);
+    color: #f8cde4;
+    opacity: 0.2;
 }
