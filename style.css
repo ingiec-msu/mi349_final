@@ -90,6 +90,26 @@ a:hover {
 .d-four { background: rgba(232,186,193,0.4); }
 .d-five { background: rgba(232,186,193,0.3); }
 
+/* Sidebar Navigation */
+.bullet {
+    display: flex;
+    flex-direction: column; /* vertical links */
+    gap: 20px; /* space between links */
+    margin-top: 30px;
+}
+
+.bullet a {
+    font-weight: bold;
+    color: #575757;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.bullet a:hover {
+    color: #e8bac1;
+    transform: translateX(5px); /* subtle hover shift */
+}
+
+
 /* Posts */
 .posts {
     width: 540px;
